@@ -193,7 +193,7 @@ python-docx==1.1.0
 python-dotenv==1.0.0
 python-frontmatter==1.0.1
 python-json-logger==2.0.4
-python-magic-bin
+python-magic
 python-version==0.0.2
 pytz==2023.3.post1
 pywin32==306
