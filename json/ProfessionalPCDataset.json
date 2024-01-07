@@ -1,0 +1,355 @@
+[
+   [
+  
+     {
+       "ID": 0, 
+       "Motherboard": "Asus TUF B450M Pro Gaming II Motherboard", 
+       "GPU": "ASUS Dual GeForce RTX 3060 O12G V2 Graphics Card", 
+       "CPU": "AMD Ryzen 5 5600X Processor", 
+       "Storage": "Adata Legend 960 Max 1TB PCIE GEN4 X4 M.2 2280 Internal Gaming SSD With Heatsink (ALEG-960M-1TCS)", 
+       "RAM": "PNY XLR8 Gaming Epic-X RGB 16GB (2X8GB) DDR4 3200MHZ CL16 1.3V Desktop Memory (Black)", 
+       "PSU": "Corsair CV Series CV650 80 Plus Bronze ATX Power Supply", 
+       "Case":"Deepcool Cyclops Mid-Tower ATX Case (Black) (R-BKAAE1-C-1)",  
+        "Cost": 54595.00,
+        "Score": 66.7,
+        "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/sigma-cyclops-gaming-pc-amd-ryzen-5-5600x-16gb-ram-1tb-ssd-rtx-3060-12gb-oc-windows-11-home",
+        "picture":"optional"
+     },
+      {
+        "ID": 1, 
+       "Motherboard": "Asrock B550 Pro4 Motherboard", 
+       "GPU": "Colorful iGAME Geforce RTX 3060 Ultra W OC 8GB-V GDDR6 Graphics Card", 
+       "CPU": "AMD Ryzen 5 5600 Processor", 
+       "Storage": "Kingston NV2 PCIE 4.0 NVME M.2 1TB SSD (SNV2S/1000G)", 
+       "RAM": "Adata XPG Spectrix D50 16GB DDR4 RGB 3200MHZ PC4-35600 Memory (White)", 
+       "PSU": "Seasonic Focus GX-650 650W 80 Plus Gold Power Suppy (SSR-650FX)", 
+       "Case":"Cooler Master Masterbox TD500 Mesh Mid Tower Case (White)", 
+        "Cost": 55395.00, 
+        "Score": 66.3,
+        "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/sigma-td500-gaming-pc-amd-ryzen-5-5600-16gb-ram-1tb-ssd-rtx-3060-windows-11-home",
+        "picture":"optional"
+     },
+      {
+        "ID": 2, 
+       "Motherboard": "", 
+       "GPU": "AMD Radeon™ 780M (Graphics Frequency 2800MHz)", 
+       "CPU": "AMD Ryzen™ 9 7940HS Processor, 8 Cores/16 Threads, (16M Cache, up to 5.2 GHz)", 
+       "Storage": "1 tb M.2 2280 PCIe4.0 SSD ×2", 
+       "RAM": "32GB DDR5 Dual channel", 
+       "PSU": "DC 19V (adapter included)", 
+       "Case":"", 
+        "Cost": 38995.00, 
+        "Score": 99.7,
+        "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/minisforum-um790-pro-amd-ryzen-9-7940hs-32gb-ram-1tb-ssd-amd-radeon-windows-11-pro-mini-gaming-pc-pre-order-downpayment",
+        "picture":"optional"
+     },
+      {
+        "ID": 3, 
+       "Motherboard": "Asus Prime H610M-K D4 Motherboard", 
+       "GPU": "ASUS Dual RTX 3050 8G Graphics Card", 
+       "CPU": "Intel Core i5 12400F Processor", 
+       "Storage": "Adata Legend 700 512GB PCIE GEN3 X4 M.2 2280 SSD (ALEG-700-512GCS)", 
+       "RAM": "PNY XLR8 Gaming Epic-X RGB 16GB (2X8GB) DDR4 3200MHZ CL16 1.3V Desktop Memory (Black)", 
+       "PSU": "DEEPCOOL DA700 80 PLUS Bronze Power Supply (DP-BZ-DA700N)", 
+       "Case":"Darkflash DK150 Luxury PC Case (Black)", 
+        "Cost": 49995.00, 
+        "Score": 75.7,
+        "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/copy-of-powered-by-asus-sigma-dk150-gaming-pc-intel-core-i5-12400f-16gb-ram-512gb-ssd-rtx-3050-windows-11-home",
+        "picture":"optional"
+     },
+      {
+        "ID": 4, 
+       "Motherboard": "GIGABYTE B550M DS3H AC AM4 DDR4 PCIE 4.0 ULTRA DURABLE ATX GAMING MOTHERBOARD", 
+       "GPU": "GIGABYTE GEFORCE RTX 3050 EAGLE OC 8G GRAPHICS CARD", 
+       "CPU": "AMD RYZEN 5 5600 PROCESSOR", 
+       "Storage": "ADATA XPG SX6000 PRO 512GB M.2 2280 PCIE GEN3X4 SSD", 
+       "RAM": "KINGSTON FURY BEAST 16GB DDR4 RGB 3200MHZ MEMORY (KIT OF 2)", 
+       "PSU": "CORSAIR CX-M SERIES CX650M SEMI-MODULAR ATX POWER SUPPLY (BLACK)", 
+       "Case":"DEEPCOOL MATREXX 40 MICRO-ATX CASE",
+        "Cost": 55995.00, 
+        "Score": 78.2,
+        "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/sigma-matrexx-40-gaming-pc-ryzen-5-5600-16-gb-ram-ddr4-512-gb-ssd-rtx-3050-windows-11-home",
+        "picture":"optional"
+     },
+      {
+        "ID": 5, 
+       "Motherboard": "Reno2", 
+       "GPU": "NVIDIA® GeForce RTX™ 3050 (8 GB GDDR6 dedicated)", 
+       "CPU": "Intel® Core™ i5-12400F (up to 4.4 GHz with Intel® Turbo Boost Technology, 18 MB L3 cache, 6 cores, 12 threads)", 
+       "Storage": "512 GB PCIe® NVMe™ TLC M.2 SSD", 
+       "RAM": "16 GB DDR4-3200 MHz RAM (2 x 8 GB)", 
+       "PSU": "350 W 80 Plus Gold certified power supply", 
+       "Case":"",
+        "Cost": 69990.00, 
+        "Score": 75.7,
+        "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/hp-victus-15l-tg02-0035d-2-50ghz-6-cores-intel-i5-12400f-512gb-ssd-gaming-desktop-pc-mica-silver-ms-office-home-student-2021-1",
+        "picture":"optional"
+     },
+      {
+        "ID": 6, 
+       "Motherboard": "", 
+       "GPU": "NVIDIA GeForce GT730 2GB", 
+       "CPU": "Intel Core i7-12700 processor", 
+       "Storage": "256GB Solid-State Drive + 1TB Hard Drive", 
+       "RAM": "8GB DDR4 Memory", 
+       "PSU": "", 
+       "Case":"", 
+        "Cost": 57995.00, 
+        "Score": 22.6,
+        "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/acer-aspire-tc-1750-desktop-pc-i7-12700-8gb-ram-ddr4-256gb-ssd-1tb-hdd-nvidia-gt730-windows-11-home-ms-office-home-student-2021-acer-k242hyl-23-8-inch-fhd-monitor",
+        "picture":"optional"
+     },
+      {
+        "ID": 7, 
+       "Motherboard": "", 
+       "GPU": "AMD Radeon™ 780M (Graphics Frequency 2800MHz)", 
+       "CPU": "AMD Ryzen™ 9 7940HS Processor, 8 Cores/16 Threads", 
+       "Storage": "M.2 2280 PCIe4.0 SSD ×2", 
+       "RAM": "DDR5 Dual channel (SODIMM Slots×2, Up to 5600MHz, Max 64GB)", 
+       "PSU": "DC 19V (adapter included)", 
+       "Case":"", 
+        "Cost": 43995.00, 
+        "Score": 99.7,
+        "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/minisforum-um790-pro-ryzen-9-7940hs-64gb-ram-1tb-ssd-windows-11-pro-mini-gaming-pc",
+        "picture":"optional"
+     },
+      {
+        "ID": 8, 
+       "Motherboard": "ASUS Prime A320M-K AMD AM4 uATX motherboard with LED", 
+       "GPU": "", 
+       "CPU": "AMD Ryzen™ 3 PRO 4350G Desktop Processor with Radeon™ Graphics", 
+       "Storage": "Kingston NV1 250GB M.2 NVMe SSD", 
+       "RAM": "16GB Kingston FURY™ Beast 3200MHz DDR4 RGB Memory", 
+       "PSU": "SilverStone ST50F-ES230 80 PLUS 230V EU 500W ATX power supply", 
+       "Case":"Agile Falcon Gaming Case with Tempered Glass", 
+        "Cost": 22500.00, 
+        "Score": 44.9,
+        "Source":"https://pcx.com.ph/collections/gaming-desktop-pcs/products/pcx-gfh-sphinx-g-v2-amd-ryzen-3-pro-gaming-desktop?variant=46421822767402",
+        "picture":"optional"
+     },
+      {
+        "ID": 9, 
+       "Motherboard": "", 
+       "GPU": "Intel® Arc™ A750 Graphics", 
+       "CPU": "Intel® Core™ i5-13400F", 
+       "Storage": "Kingston 1TB NV2 NVME PCIE M.2", 
+       "RAM": "Kingston 16GB DDR4 3200MHz Fury Beast RGB", 
+       "PSU": "MSI MAG A650BN 650W 80PLUS", 
+       "Case":"NZXT H5 FLOW Tempered Glass ATX White", 
+        "Cost": 49995.00, 
+        "Score": 0,
+        "Source":"https://pcx.com.ph/collections/gaming-desktop-pcs/products/pcx-gfh-morph-df-intel%C2%AE-core%E2%84%A2-i5-intel%C2%AE-arc%E2%84%A2-a750-graphics-gaming-desktop",
+        "picture":"optional"
+     }, {
+      "ID": 10, 
+     "Motherboard": "Asus EX-A320M Gaming", 
+     "GPU": "Radeon Vega 7", 
+     "CPU": "AMD Ryzen 5 5600G 6 Core 12 Threads", 
+     "Storage": "Adata 512GB SU800 SSD", 
+     "RAM": "Kingston Fury 16GB RGB DDR4 3200Mhz", 
+     "PSU": "Ace Power 650W 80+ Bronze Ultra Power FX", 
+     "Case":"Trendsonic Megatron ME19-A ATX Gaming Case - Black", 
+      "Cost": 49995.00, 
+      "Score": 44.7,
+      "Source":"https://gameone.ph/pc-built-amd-ryzen-5-5600g-asus-ex-a320m-16gb-ram-512gb-ssd-asus-vp249qgr-23-8-gaming-monitor-windows-11-home.html",
+      "picture":"optional"
+   },
+    {
+      "ID": 11, 
+     "Motherboard": "H610M-K D4 Matx Ddr4 LGA 1700  Motherboard", 
+     "GPU": "Intel UHD 730 Graphics", 
+     "CPU": "Intel Core i3-12100", 
+     "Storage": "512gb SATA 2.5 Internal Solid State Drive", 
+     "RAM": "8gb 1x8 3200Mhz Memory", 
+     "PSU": "700 watts Power Supplies", 
+     "Case":"Micro ATX Gaming PC Case Black",  
+      "Cost": 17499.00, 
+      "Score": 40.3,
+      "Source":"https://easypc.com.ph/collections/desktops/products/intel-core-i3-12100-h610-8gb-3200mhz-240gb-sata-700w-matx-case-18-5-monitor-kbm-productivity?variant=42861307527339"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 12, 
+     "Motherboard": "A520 Motherboard", 
+     "GPU": "Radeon Vega 6", 
+     "CPU": "AMD Ryzen 3 Pro 4350G Socket Am4", 
+     "Storage": "512gb SATA 2.5 Internal Solid State Drive", 
+     "RAM": "8gb 1x8 3200Mhz Memory", 
+     "PSU": "700 watts Power Supplies", 
+     "Case":"Micro ATX Gaming PC Case Black", 
+      "Cost": 13799.00, 
+      "Score": 44.9,
+      "Source":"https://easypc.com.ph/collections/desktops/products/amd-ryzen-3-4350g-a320-8gb-3200mhz-240gb-sata-700w-matx-case-18-5-monitor-kbm-productivity?variant=42860639289515"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 13, 
+     "Motherboard": "A520 Motherboard", 
+     "GPU": "Radeon Vega 7", 
+     "CPU": "AMD Ryzen 5 Pro 4650G", 
+     "Storage": "512gb SATA 2.5 Internal Solid State Drive", 
+     "RAM": "16GB 2x8 3200mHz Memory", 
+     "PSU": "700 watts Power Supply", 
+     "Case":"Micro ATX Gaming PC Case Black",  
+      "Cost": 17399.00, 
+      "Score": 47.9,
+      "Source":"https://easypc.com.ph/collections/desktops/products/amd-ryzen-5-4650g-a320-16gb-3200mhz-240gb-sata-700w-matx-case-18-5-monitor-kbm-productivity?variant=42860616319147"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 14, 
+     "Motherboard": "A520 Motherboard", 
+     "GPU": "Rx 6600", 
+     "CPU": "AMD Ryzen 5 4500 Socket Am4", 
+     "Storage": "240gb SATA 2.5 Internal Solid State Drive", 
+     "RAM": "16GB 2x8 3200mHz Memory", 
+     "PSU": "500 watts 80 Plus Power Supply", 
+     "Case":"",  
+      "Cost": 29315.00, 
+      "Score": 64.8,
+      "Source":"https://easypc.com.ph/collections/desktops/products/amd-ryzen-5-4500-gaming-desktop?variant=42861978419371"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 15, 
+     "Motherboard": "B450M Pro Motherboard", 
+     "GPU": "Radeon Vega 7", 
+     "CPU": "AMD Ryzen 5 5600G Socket Am4", 
+     "Storage": "512gb SATA 2.5 Internal Solid State Drive", 
+     "RAM": "16GB 2x8 3200mHz Memory", 
+     "PSU": "500 watts 80 Plus Power Supply", 
+     "Case":"",  
+      "Cost": 17999.00, 
+      "Score": 44.8,
+      "Source":"https://easypc.com.ph/collections/desktops/products/amd-ryzen-5-5600g-b450m-16gb-3200mhz-240gb-sata-500w-atx-case-gaming"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 16, 
+     "Motherboard": "B450M PRO-VDH MAX", 
+     "GPU": "Radeon Vega 7", 
+     "CPU": "AMD Ryzen 5 Pro 4650G", 
+     "Storage": "512gb SATA 2.5 Internal Solid State Drive", 
+     "RAM": "16GB 2x8 3200mHz Memory", 
+     "PSU": "500 watts 80 Plus Power Supply", 
+     "Case":"",  
+      "Cost": 16799.00, 
+      "Score": 47.8,
+      "Source":"https://easypc.com.ph/collections/desktops/products/amd-ryzen-5-4650g-a320-16gb-3200mhz-240gb-sata-500w-atx-case-gaming?variant=42861978288299"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 17, 
+     "Motherboard": "", 
+     "GPU": "AMD Radeon™ RX 6600M(GDDR6 8GB)", 
+     "CPU": "AMD Ryzen™ 7 7735HS , 8 Cores/16 Threads", 
+     "Storage": "512gb SATA 2.5 Internal Solid State Drive", 
+     "RAM": "DDR5 Dual channel (SODIMM Slots×2) Supports a maximum of 64GB (32GB x 2) of DDR5", 
+     "PSU": "DC 19V (Adapter Included)", 
+     "Case":"",  
+      "Cost": 44995.00, 
+      "Score": 17.3,
+      "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/minisforum-neptune-series-hx77g-amd-ryzen-7-7735hs-32gb-ram-1tb-ssd-amd-radeon-rx-6600m-windows-11-pro-mini-gaming-pc"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 18, 
+     "Motherboard": "", 
+     "GPU": "AMD Radeon™ 780M (Graphics Frequency 2800MHz)", 
+     "CPU": "AMD Ryzen™ 9 7940HS Processor, 8 Cores/16 Threads, (16M Cache, up to 5.2 GHz)", 
+     "Storage": "1 tb M.2 2280 PCIe4.0 SSD ×2", 
+     "RAM": "32GB DDR5 Dual channel", 
+     "PSU": "DC 19V (Adapter Included)", 
+     "Case":"",  
+      "Cost": 38995.00, 
+      "Score": 97,
+      "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/minisforum-um790-pro-amd-ryzen-9-7940hs-32gb-ram-1tb-ssd-amd-radeon-windows-11-pro-mini-gaming-pc-pre-order-downpayment"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 19, 
+     "Motherboard": "Erica8", 
+     "GPU": "AMD Radeon™ RX 6600XT Graphics (8 GB GDDR6 dedicated)", 
+     "CPU": "AMD Ryzen™ 5 5600G (up to 4.4 GHz max boost clock, 16 MB L3 cache, 6 cores, 12 threads)", 
+     "Storage": "256 GB PCIe® NVMe™ TLC M.2 SSD", 
+     "RAM": "16 GB DDR4-3200 MHz RAM (2 x 8 GB)", 
+     "PSU": "500 W 80 Plus Bronze certified power supply", 
+     "Case":"",  
+      "Cost": 74990.00, 
+      "Score": 66.1,
+      "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/hp-victus-15l-tg02-0036d-3-90ghz-6-cores-amd-ryzen-5-5600g-512gb-ssd-gaming-desktop-pc-ceramic-white-ms-office-home-student-2021"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 20, 
+     "Motherboard": "", 
+     "GPU": "Radeon Vega 7", 
+     "CPU": "AMD Ryzen™ 5 5625U, 6 Cores/12 Threads", 
+     "Storage": "M.2 2280 512GB PCIe3.0 SSD", 
+     "RAM": "DDR4 8GB ×2 Dual channel", 
+     "PSU": "DC 19V (adapter included)", 
+     "Case":"",  
+      "Cost": 15995.00, 
+      "Score": 42.4,
+      "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/minisforum-mars-series-mc560-ryzen-5-5625u-16gb-ram-512gb-ssd-amd-radeon-mini-gaming-pc"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 21, 
+     "Motherboard": "", 
+     "GPU": "AMD Radeon 680M", 
+     "CPU": "AMD Ryzen 7 7735HS", 
+     "Storage": "1TB SSD", 
+     "RAM": "DDR5 32GB RAM(2x16GB)", 
+     "PSU": "", 
+     "Case":"",  
+      "Cost": 29995.00, 
+      "Score": 80.8,
+      "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/minisforum-um773-lite-ryzen-7-7735hs-32gb-ram-1tb-ssd-amd-radeon-680m-mini-gaming-pc"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 22, 
+     "Motherboard": "", 
+     "GPU": "Intel Iris Xe Graphics (Graphics frequency 1.45 GHz)", 
+     "CPU": "Intel Core i9-12900H", 
+     "Storage": "M.2 2280 1TB PCIe 4.0 SSD storage (up to 2TB)", 
+     "RAM": "DDR4 32GB", 
+     "PSU": "", 
+     "Case":"",  
+      "Cost": 34995.00, 
+      "Score": 82.8,
+      "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/minisforum-neptune-series-nad9-intel-core-i9-12900h-32gb-ram-1tb-ssd-intel-iris-xe-windows-11-pro-mini-gaming-pc"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 23, 
+     "Motherboard": "", 
+     "GPU": "AMD Radeon 780M", 
+     "CPU": "AMD Ryzen™ 7 7840HS Base 3.80 GHz boost to 5.10 GHz", 
+     "Storage": "PCIe 4.0 M.2 NVMe 2280 1TB SSD", 
+     "RAM": "Dual SO-DIMM 32GB DDR5", 
+     "PSU": "", 
+     "Case":"",  
+      "Cost": 34995.00, 
+      "Score": 98.8,
+      "Source":"https://ecommerce.datablitz.com.ph/collections/gaming-desktops/products/beelink-gtr7-amd-ryzen-7-7840hs-32gb-ram-1tb-ssd-windows-11-pro-mini-gaming-pc-tourmaline-blue"
+      ,"picture":"optional"
+   },
+    {
+      "ID": 25, 
+     "Motherboard": "ASUS PRIME H510M", 
+     "GPU": "", 
+     "CPU": "Intel® Core™ i7-10700 Processor (16M Cache, up to 4.80 GHz)", 
+     "Storage": "Kingston 500GB NVME PCIE M.2 Solid State Drive", 
+     "RAM": "8GB Kingston FURY™ Beast DDR4 2666MHz Memory", 
+     "PSU": "", 
+     "Case":"NEUTRON Phantom Casing", 
+      "Cost": 21750.00, 
+      "Score": 40.7,
+      "Source":"https://pcx.com.ph/collections/lfh-powered-by-asus/products/pcx-lfh-doyen-g-intel%C2%AE-core%E2%84%A2-i7-desktop-package?variant=45928961605930"
+      ,"picture":"optional"
+   }
+  
+]
+]

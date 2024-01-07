@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechSnap</title>
+
+    <!-- External CSS -->
+    <link rel="shortcut icon" href="/static/css/TS.png" type="x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"/>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"/>
+
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand navbar-logo">
+          <img src="/static/css/Logo.png" alt="logo" class="logo-1" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="fas fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cw">Budgeting</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More
+              </a>
+              <div class="dropdown-menu animated slideDown more-actions" aria-labelledby="navbarDropdown">
+                <form action="/component">
+                  <button class="drop-down-list">Find Components</button>
+                </form>
+                <form action="/pre_built">
+                  <button class="drop-down-list">Look For Pre-builts</button>
+                </form>
+                <form action="/querying">
+                  <button class="drop-down-list">Ask Here</button>
+                </form>
+                
+                <!-- Add dropdown items as needed -->
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Banner Start -->
+    <section id="home" class="banner">
+      <div class="banner-overlay">
+        <div class="container">
+          <div class="row">
+            <!-- Banner Content -->
+            <div class="col-md-8 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="banner-text">
+                <h2 class="text-white">Simplifying Tech Recognition</h2>
+                <p class="text-white">
+                  TechSnap: Effortless hardware recognition for confident decisions, quick troubleshooting, and easy upgrades. Simplifying your tech world.
+                </p>
+              </div>
+            </div>
+            <!-- File Upload & Image Preview -->
+            <div class="col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.2s" style="z-index: 100;">
+              <h2 class="text-white">File Upload & Image Preview</h2>
+              <form
+                id="file-upload-form"
+                class="uploader"
+                form
+                action="/detect"
+                method="POST"
+                onsubmit="saveImageToLocalStorage()"
+                enctype="multipart/form-data"
+              >
+                <!-- Upload Input -->
+                <input
+                  id="file-upload"
+                  type="file"
+                  name="fileUpload"
+                  accept="image/*"
+                  onchange="handleImageUpload(this)"
+                />
+                <label for="file-upload" id="file-drag">
+                  <img id="file-image" src="#" alt="Preview" class="hidden" />
+                  <div id="start">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    <div>Select an image of a PC part or drag it here</div>
+                    <div id="notimage" class="hidden">
+                      Please select an image
+                    </div>
+                    <span id="file-upload-btn" class="btn btn-primary"
+                      >Select a file</span
+                    >
+                  </div>
+                  <div id="response" class="hidden">
+                    <div id="messages"></div>
+                    <progress class="progress" id="file-progress" value="0">
+                      <span>0</span>%
+                    </progress>
+                  </div>
+                </label>
+                <button
+                  id="next-page-btn"
+                  class="btn btn-primary"
+                  style="display: none; "
+                >
+                  Go to Next Page
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner End -->
+
+        <!-- About Start -->
+        <section id="about" class="about section-padding prelative">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <!-- About Header -->
+                <div class="sectioner-header text-center">
+                  <h3>About</h3>
+                  <span class="line"></span>
+                  <p>
+                    TechSnap is here to revolutionize and offer a more efficient and
+                    precise solution for hardware recognition. Our innovative
+                    technology eliminates the guesswork and streamlines the
+                    identification of computer components, making it easier for
+                    users to make informed decisions, troubleshoot issues, and
+                    upgrade their systems with confidence. We're dedicated to
+                    simplifying the world of computer hardware, saving you time and
+                    hassle while ensuring you have the information you need at your
+                    fingertips.
+                  </p>
+                </div>
+                <!-- About Content -->
+                <div class="section-content text-center">
+                  <div class="row">
+                    <!-- Feature Box 1 -->
+                    <div class="col-md-4">
+                      <div class="custom-button-container">
+                      <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="/component" class="button-link">
+                          <i class="fas fa-archive icon-blur" aria-hidden="true"></i>
+                          <span class="button-text">Click Me</span>
+                        </a>
+                        <h5>Find Components</h5>
+                        <p>
+                          Streamline discovery of crucial elements with our 'Find Components' feature, simplifying your tech exploration journey.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- Feature Box 2 -->
+                    <div class="col-md-4">
+                      <div class="custom-button-container">
+                      <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="/querying" class="button-link">
+                        <i class="fas fa-comments icon-blur" aria-hidden="true"></i>
+                        <span class="button-text">Click Me</span>
+                      </a>
+                        <h5>Ask Here</h5>
+                        <p>
+                          Seek guidance and insights instantly through 'Ask Here', your go-to platform for swift and reliable tech assistance.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- Feature Box 3 -->
+                    <div class="col-md-4">
+                      <div class="custom-button-container">
+                      <div class="icon-box wow fadeInUp" data-wow-delay="0.6s">
+                        <a href="/pre_built" class="button-link">
+                        <i class="fas fa-desktop icon-blur" aria-hidden="true"></i>
+                        <span class="button-text">Click Me</span>
+                      </a>
+                        <h5>Look For Pre-Builts</h5>
+                        <p>
+                          Explore 'Look For Pre-Builts' for dependable and ready-made solutions in the dynamic realm of technology.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- About End -->
+
+    <!--Information Start-->
+    <section id="cw" class="team section-padding animated fadeInUp">
+    <h1 class="faq-heading">Need Help Budgeting?</h1>
+    <span class="line"></span>
+    <section class="faq-container">
+      <div class="faq-one">
+        <!-- faq question -->
+        <h1 class="faq-page">Web Surfing</h1>
+        <!-- faq answer -->
+        <div class="faq-body">
+          <div class="row">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th rowspan="2">PC Level</th>
+                        <th rowspan="2">Budget</th>
+                        <th rowspan="2">PC Case</th>
+                        <th rowspan="2">Motherboard</th>
+                        <th rowspan="2">CPU</th>
+                        <th rowspan="2">CPU Cooler</th>
+                        <th rowspan="2">RAM</th>
+                        <th rowspan="2">Graphics</th>
+                        <th rowspan="2">Storage</th>
+                        <th rowspan="2">Power Supply</th>
+                        <th colspan="2">Power consumption
+                          
+                        </th>
+                        
+                        <!-- Add more columns as needed -->
+                    </tr>
+                    <tr>
+                      <th>Idle</th>
+                      <th>Peak</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ultra Budget</td>
+                        <td>~$200</td>
+                        <td>Base mini ITX case ($40)</td>
+                        <td>H610 DDR4 Motherboard ($60)</td>
+                        <td>Intel Celeron G8900 ($50) </td>
+                        <td>Intel stock cooler (included)</td>
+                        <td>4 GB DDR4-3200 CL16 (1 x 4 GB) ($10)</td>
+                        <td>UHD Graphics 710 (integrated)</td>
+                        <td>240 GB SATA SSD ($15)</td>
+                        <td>500 W Tier D power supply ($40)</td>
+                         <td>8 W</td>
+                         <td>83 W</td>
+                        <!-- Add more columns as needed -->
+                    </tr>
+                    <tr>
+                      <td>Extra Budget</td>
+                      <td>~$200</td>
+                      <td>Base mini ITX case ($40)</td>
+                      <td>A520 DDR4 Motherboard ($60)</td>
+                      <td>AMD Ryzen 5 5600G ($120) </td>
+                      <td>AMD Wraith Stealth (included)</td>
+                      <td>8 GB DDR4-3200 CL16 (1 x 8 GB) ($15)</td>
+                      <td>AMD Radeon Vega 7 (integrated)</td>
+                      <td>512 GB PCie 3.0 SSD ($30)</td>
+                      <td>500 W Tier D power supply ($40)</td>
+                       <td>14 W</td>
+                       <td>139 W</td>
+                      <!-- Add more columns as needed -->
+                  </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        </div>
+      </div>
+      <hr class="hr-line" />
+      <div class="faq-two">
+        <!-- faq question -->
+        <h1 class="faq-page">Office Computer</h1>
+        <!-- faq answer -->
+        <div class="faq-body">
+          <div class="row">
+          <table border="1">
+            <thead>
+                <tr>
+                    <th rowspan="2">PC Level</th>
+                    <th rowspan="2">Budget</th>
+                    <th rowspan="2">PC Case</th>
+                    <th rowspan="2">Motherboard</th>
+                    <th rowspan="2">CPU</th>
+                    <th rowspan="2">CPU Cooler</th>
+                    <th rowspan="2">RAM</th>
+                    <th rowspan="2">Graphics</th>
+                    <th rowspan="2">Storage</th>
+                    <th rowspan="2">Power Supply</th>
+                    <th colspan="2">Power consumption
+                      
+                    </th>
+                    
+                    <!-- Add more columns as needed -->
+                </tr>
+                <tr>
+                  <th>Idle</th>
+                  <th>Peak</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Upper Entry-level</td>
+                <td>~$500</td>
+                <td>Base micro ITX case ($60)</td>
+                <td>A620 DDR5 Motherboard ($70)</td>
+                <td>AMD Ryzen 5 7600 ($200) </td>
+                <td>AMD Wraith Stealth (included)</td>
+                <td>8 GB DDR4-3200 CL16 (1 x 8 GB) ($15)</td>
+                <td>AMD Radeon Vega 8 (integrated)</td>
+                <td>512 GB PCie 3.0 SSD ($30)</td>
+                <td>500 W Tier D power supply ($40)</td>
+                 <td>14 W</td>
+                 <td>139 W</td>
+                <!-- Add more columns as needed -->
+            </tr>
+            <tr>
+              <td>Entry-level</td>
+              <td>~$400</td>
+              <td>Base micro ITX case ($60)</td>
+              <td>A520 DDR4 Motherboard ($50)</td>
+              <td>AMD Ryzen 7 5700G ($190) </td>
+              <td>AMD Wraith Stealth (included)</td>
+              <td>8 GB DDR4-3200 CL16 (1 x 8 GB) ($15)</td>
+              <td>AMD Radeon Graphics (integrated)</td>
+              <td>1 TB PCie 3.0 SSD ($50)</td>
+              <td>650 W Tier D power supply ($70)</td>
+               <td>14 W</td>
+               <td>140 W</td>
+              <!-- Add more columns as needed -->
+          </tr>
+            </tbody>
+        </table>
+          </div>
+        </div>
+      </div>
+      <hr class="hr-line" />
+      <div class="faq-three">
+        <!-- faq question -->
+        <h1 class="faq-page">Gaming PC</h1>
+        <!-- faq answer -->
+        <div class="faq-body">
+          <div class="row">
+          <table border="1">
+            <thead>
+                <tr>
+                    <th rowspan="2">PC Level</th>
+                    <th rowspan="2">Budget</th>
+                    <th rowspan="2">PC Case</th>
+                    <th rowspan="2">Motherboard</th>
+                    <th rowspan="2">CPU</th>
+                    <th rowspan="2">CPU Cooler</th>
+                    <th rowspan="2">RAM</th>
+                    <th rowspan="2">Graphics</th>
+                    <th rowspan="2">Storage</th>
+                    <th rowspan="2">Power Supply</th>
+                    
+                      
+                    
+
+                    <!-- Add more columns as needed -->
+                </tr>
+                
+            </thead>
+            <tbody>
+              <tr>
+                <td>Upper Entry-level</td>
+                <td>~$500</td>
+                <td>Base micro ATX case with RGB($70)</td>
+                <td>B550 DDR5 Motherboard ($90)</td>
+                <td>AMD Ryzen 5 5500 ($100) </td>
+                <td>AMD Wraith Stealth (included)</td>
+                <td>16 GB DDR4-3200 CL18 (2 x 8 GB) ($30)</td>
+                <td>AMD Radeon RX 580 8 GB ($60)</td>
+                <td>1 TB PCie 3.0 SSD ($50)</td>
+                <td>650 W Tier D power supply ($70)</td>
+                 
+                <!-- Add more columns as needed -->
+            </tr>
+            <tr>
+              <td>Upper Entry-level</td>
+              <td>~$500</td>
+              <td>Base micro ATX case with RGB($70)</td>
+              <td>B550 DDR5 Motherboard ($90)</td>
+              <td>AMD Ryzen 5 5500 ($100) </td>
+              <td>AMD Wraith Stealth (included)</td>
+              <td>16 GB DDR4-3200 CL18 (2 x 8 GB) ($30)</td>
+              <td>AMD Radeon RX 6600 8 GB ($190)</td>
+              <td>1 TB PCie 3.0 SSD ($50)</td>
+              <td>650 W Tier D power supply ($70)</td>
+               
+              <!-- Add more columns as needed -->
+          </tr>
+                
+            </tbody>
+        </table>
+          </div>
+        </div>
+      </div>
+      <hr class="hr-line" />
+      <div class="faq-four">
+        <!-- faq question -->
+        <h1 class="faq-page">Workstation</h1>
+        <!-- faq answer -->
+        <div class="faq-body">
+          <div class="row">
+          <table border="1">
+            <thead>
+                <tr>
+                    <th rowspan="2">PC Level</th>
+                    <th rowspan="2">Budget</th>
+                    <th rowspan="2">PC Case</th>
+                    <th rowspan="2">Motherboard</th>
+                    <th rowspan="2">CPU</th>
+                    <th rowspan="2">CPU Cooler</th>
+                    <th rowspan="2">RAM</th>
+                    <th rowspan="2">Graphics</th>
+                    <th rowspan="2">Storage</th>
+                    <th rowspan="2">Power Supply</th>
+                    
+                      
+                    
+
+                    <!-- Add more columns as needed -->
+                </tr>
+                
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mid-range</td>
+                <td>~$800</td>
+                <td>Base micro ATX case($60)</td>
+                <td>B660 DDR4 Motherboard ($100)</td>
+                <td>Intel Core i5-13400 ($210)</td>
+                <td>Intel stock cooler (included)</td>
+                <td>16 GB DDR4-3200 (2 x 8 GB) ($30)</td>
+                <td>Nvidia T600 4 GB ($220)</td>
+                <td>1 TB PCie 3.0 SSD ($50)</td>
+                <td>600 W Gold power supply ($140)</td>
+                 
+                <!-- Add more columns as needed -->
+            </tr>
+            <tr>
+              <td>Upper mid-level</td>
+              <td>~$1000</td>
+              <td>Base micro ATX case with RGB($70)</td>
+              <td>B660 DDR4 Motherboard ($100)</td>
+              <td>Intel Core i5-13500 ($260)</td>
+              <td>Intel stock cooler (included)</td>
+              <td>16 GB DDR4-3200 (2 x 8 GB) ($30)</td>
+              <td>Nvidia T1000 4 GB ($320)</td>
+              <td>1 TB PCie 3.0 SSD ($50)</td>
+              <td>650 W Gold power supply ($140)</td>
+               
+              <!-- Add more columns as needed -->
+          </tr>
+                
+            </tbody>
+        </table>
+          </div>
+        </div>
+      </div>
+      <hr class="hr-line" />
+      <div class="faq-five">
+        <!-- faq question -->
+        <h1 class="faq-page">Mining Rig</h1>
+        <!-- faq answer -->
+        <div class="faq-body">
+          <div class="row">
+          <table border="1">
+            <thead>
+                <tr>
+                    <th rowspan="2">PC Level</th>
+                    <th rowspan="2">Budget</th>
+                    <th rowspan="2">PC Case</th>
+                    <th rowspan="2">Motherboard</th>
+                    <th rowspan="2">CPU</th>
+                    <th rowspan="2">CPU Cooler</th>
+                    <th rowspan="2">RAM</th>
+                    <th rowspan="2">Graphics</th>
+                    <th rowspan="2">Storage</th>
+                    <th rowspan="2">Power Supply</th>
+                    
+                      
+                    
+
+                    <!-- Add more columns as needed -->
+                </tr>
+                
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mid-range</td>
+                <td>~$800</td>
+                <td>Base micro ATX case($60)</td>
+                <td>B660 DDR4 Motherboard ($100)</td>
+                <td>Intel Core i5-13400 ($210)</td>
+                <td>Intel stock cooler (included)</td>
+                <td>16 GB DDR4-3200 (2 x 8 GB) ($30)</td>
+                <td>Nvidia T600 4 GB ($220)</td>
+                <td>1 TB PCie 3.0 SSD ($50)</td>
+                <td>600 W Gold power supply ($140)</td>
+                 
+                <!-- Add more columns as needed -->
+            </tr>
+            <tr>
+              <td>Upper mid-level</td>
+              <td>~$1000</td>
+              <td>Base micro ATX case with RGB($70)</td>
+              <td>B660 DDR4 Motherboard ($100)</td>
+              <td>Intel Core i5-13500 ($260)</td>
+              <td>Intel stock cooler (included)</td>
+              <td>16 GB DDR4-3200 (2 x 8 GB) ($30)</td>
+              <td>Nvidia T1000 4 GB ($320)</td>
+              <td>1 TB PCie 3.0 SSD ($50)</td>
+              <td>650 W Gold power supply ($140)</td>
+               
+              <!-- Add more columns as needed -->
+          </tr>
+                
+            </tbody>
+        </table>
+          </div>
+        </div>
+      </div>
+      <hr class="hr-line" />
+      <div class="faq-six">
+        <!-- faq question -->
+        <h1 class="faq-page">Entertainment System</h1>
+        <!-- faq answer -->
+        <div class="faq-body">
+          <div class="row">
+          <table border="1">
+            <thead>
+                <tr>
+                    <th rowspan="2">PC Level</th>
+                    <th rowspan="2">Budget</th>
+                    <th rowspan="2">PC Case</th>
+                    <th rowspan="2">Motherboard</th>
+                    <th rowspan="2">CPU</th>
+                    <th rowspan="2">CPU Cooler</th>
+                    <th rowspan="2">RAM</th>
+                    <th rowspan="2">Graphics / Video Card </th>
+                    <th rowspan="2">Storage</th>
+                    <th colspan="2">Power consumption
+                    </th>
+                    
+                    <!-- Add more columns as needed -->
+                </tr>
+                
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mid-range</td>
+                <td>~$800</td>
+                <td>Base micro ATX case($60)</td>
+                <td>B660 DDR4 Motherboard ($100)</td>
+                <td>Intel Core i5-13400 ($210)</td>
+                <td>Intel stock cooler (included)</td>
+                <td>16 GB DDR4-3200 (2 x 8 GB) ($30)</td>
+                <td>Nvidia T600 4 GB ($220)</td>
+                <td>1 TB PCie 3.0 SSD ($50)</td>
+                <td>600 W Gold power supply ($140)</td>
+                 
+                <!-- Add more columns as needed -->
+            </tr>
+            <tr>
+              <td>Upper mid-level</td>
+              <td>~$1000</td>
+              <td>Base micro ATX case with RGB($70)</td>
+              <td>B660 DDR4 Motherboard ($100)</td>
+              <td>Intel Core i5-13500 ($260)</td>
+              <td>Intel stock cooler (included)</td>
+              <td>16 GB DDR4-3200 (2 x 8 GB) ($30)</td>
+              <td>Nvidia T1000 4 GB ($320)</td>
+              <td>1 TB PCie 3.0 SSD ($50)</td>
+              <td>650 W Gold power supply ($140)</td>
+               
+              <!-- Add more columns as needed -->
+          </tr>
+                
+            </tbody>
+        </table>
+          </div>
+        </div>
+      </div>
+      <hr class="hr-line" />
+      <div class="faq-seven">
+        <!-- faq question -->
+        <h1 class="faq-page">Server</h1>
+        <!-- faq answer -->
+        <div class="faq-body">
+          <div class="row">
+          <table border="1">
+            <thead>
+                <tr>
+                    <th rowspan="2">PC Level</th>
+                    <th rowspan="2">Budget</th>
+                    <th rowspan="2">PC Case</th>
+                    <th rowspan="2">Motherboard</th>
+                    <th rowspan="2">CPU</th>
+                    <th rowspan="2">CPU Cooler</th>
+                    <th rowspan="2">RAM</th>
+                    <th rowspan="2">Graphics</th>
+                    <th rowspan="2">Storage</th>
+                    <th rowspan="2">Power Supply</th>
+                    
+
+                    <!-- Add more columns as needed -->
+                </tr>
+                
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mid-range</td>
+                <td>~$800</td>
+                <td>Base micro ATX case($60)</td>
+                <td>B660 DDR4 Motherboard ($100)</td>
+                <td>Intel Core i5-13400 ($210)</td>
+                <td>Intel stock cooler (included)</td>
+                <td>16 GB DDR4-3200 (2 x 8 GB) ($30)</td>
+                <td>Nvidia T600 4 GB ($220)</td>
+                <td>1 TB PCie 3.0 SSD ($50)</td>
+                <td>600 W Gold power supply ($140)</td>
+                 
+                <!-- Add more columns as needed -->
+            </tr>
+            <tr>
+              <td>Upper mid-level</td>
+              <td>~$1000</td>
+              <td>Base micro ATX case with RGB($70)</td>
+              <td>B660 DDR4 Motherboard ($100)</td>
+              <td>Intel Core i5-13500 ($260)</td>
+              <td>Intel stock cooler (included)</td>
+              <td>16 GB DDR4-3200 (2 x 8 GB) ($30)</td>
+              <td>Nvidia T1000 4 GB ($320)</td>
+              <td>1 TB PCie 3.0 SSD ($50)</td>
+              <td>650 W Gold power supply ($140)</td>
+               
+              <!-- Add more columns as needed -->
+          </tr>
+                
+            </tbody>
+        </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+    <!--Information End-->
+
+ 
+
+    <!-- Team Start -->
+    <section id="team" class="team section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Team Header -->
+            <div class="sectioner-header text-center">
+              <h3>Our Team</h3>
+              <span class="line"></span>
+            </div>
+            <!-- Team Content -->
+            <div class="section-content text-center">
+              <div class="row">
+                <!-- Team Member 1 -->
+                <div class="col-md-4">
+                  <div class="team-detail wow bounce" data-wow-delay="0.2s">
+                    <img
+                      src="/static/css/User1.jpg"
+                      class="img-fluid"
+                      alt="Team Member 1"
+                    />
+                    <h4>Jeshuel Jersey Sosa</h4>
+                    <p>Web Developer</p>
+                  </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="col-md-4">
+                  <div class="team-detail wow bounce" data-wow-delay="0.4s">
+                    <img
+                      src="/static/css/User2.jpg"
+                      class="img-fluid"
+                      alt="Team Member 2"
+                    />
+                    <h4>Matt Jerson Figueroa</h4>
+                    <p>Web Developer</p>
+                  </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="col-md-4">
+                  <div class="team-detail wow bounce" data-wow-delay="0.6s">
+                    <img
+                      src="/static/css/User3.jpg"
+                      class="img-fluid"
+                      alt="Team Member 3"
+                    />
+                    <h4>Ralph Angelo Togle</h4>
+                    <p>Web Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team End -->
+
+    <!-- Contact Start -->
+    <section id="contact" class="contact section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Contact Header -->
+            <div class="sectioner-header text-center">
+              <h3>Contact us</h3>
+              <span class="line"></span>
+            </div>
+            <!-- Contact Content -->
+            <div class="section-content">
+              <div class="row">
+                <!-- Contact Form -->
+                <div class="col-sm-12 col-md-12 col-lg-8">
+                  <form
+                    id="contact_form"
+                    action="/submit_contact"
+                    method="POST"
+                  >
+                    <div class="row">
+                      <div class="col">
+                        <input
+                        style="border-radius: 7px; padding: 0px 16px 0px 16px;"
+                          type="text"
+                          id="your_name"
+                          class="form-input w-100"
+                          name="full-name"
+                          placeholder="Full Name"
+                          required
+                        />
+                      </div>
+                      <div class="col">
+                        <input
+                          style="border-radius: 7px; padding: 0px 16px 0px 16px;"
+                          type="email"
+                          id="email"
+                          class="form-input w-100"
+                          name="email"
+                          placeholder="Email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <input
+                    style="border-radius: 7px; padding: 0px 16px 0px 16px;"
+                      type="text"
+                      id="subject"
+                      class="form-input w-100"
+                      name="subject"
+                      placeholder="Subject"
+                    />
+                    <textarea
+                    style="border-radius: 14px; padding: 16px;"
+                      class="form-input w-100"
+                      id="message"
+                      placeholder="Message"
+                      name="message"
+                    ></textarea>
+                    <button
+                      class="btn-grad w-100 text-uppercase"
+                      type="submit"
+                      name="button"
+                    >
+                      Submit
+                    </button>
+                  </form>
+                </div>
+                <!-- Contact Information -->
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                  <div class="contact-info white">
+                    <!-- Address -->
+                    <div class="contact-item media">
+                      <i
+                        class="fa fa-map-marker-alt media-left media-right-margin text-white"
+                      ></i>
+                      <div class="media-body">
+                        <p class="text-uppercase text-white">Address</p>
+                        <p class="text-uppercase text-white">
+                          DBB-B, 4115 West Ave, Dasmariñas, Cavite
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Phone -->
+                    <div class="contact-item media">
+                      <i class="fa fa-mobile media-left media-right-margin text-white"></i>
+                      <div class="media-body">
+                        <p class="text-uppercase text-white">Phone</p>
+                        <p class="text-uppercase">
+                          <a class="text-white" href="tel:09611831986"
+                            >09611831986</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="contact-item media">
+                      <i
+                        class="fa fa-envelope media-left media-right-margin text-white"
+                      ></i>
+                      <div class="media-body">
+                        <p class="text-uppercase text-white">E-mail</p>
+                        <p class="text-uppercase">
+                          <a
+                            class="text-white"
+                            href="mailto:Mattjersonn@gmail.com"
+                            >Mattjersonn@gmail.com</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Working Hours -->
+                    <div class="contact-item media">
+                      <i class="fa fa-clock media-left media-right-margin text-white"></i>
+                      <div class="media-body">
+                        <p class="text-uppercase text-white">Working Hours</p>
+                        <p class="text-uppercase text-white">Mon-Fri 9.00 AM to 5.00PM.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact End -->
+
+    <!-- Footer -->
+    <footer class="footer-copy">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <p>2023 &copy; TechSnap</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="/static/js/ScrollIt.Min.js" defer></script>
+    <script src="/static/js/Wow.Min.js" defer></script>
+    <script>
+      
+      $(document).ready(function (e) {
+        $(".slider").bxSlider({
+          pager: false,
+        });
+      });
+      var error = "{{error}}"
+      if (error.length > 0){
+        alert(error)
+      }
+      // File upload handling functions
+      function handleImageUpload(input) {
+        var file = input.files[0];
+        var nextPageButton = document.getElementById("next-page-btn");
+        if (file) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            var imageSrc = e.target.result;
+            localStorage.setItem("uploadedImage", imageSrc);
+            nextPageButton.style.display = "inline-block";
+          };
+
+          reader.readAsDataURL(file);
+        }
+      }
+
+      function saveImageToLocalStorage() {
+        var fileInput = document.getElementById("file-upload");
+        handleImageUpload(fileInput);
+      }
+
+      // Event listeners and initialization
+      document
+        .getElementById("file-upload-btn")
+        .addEventListener("click", function () {
+          saveImageToLocalStorage();
+        });
+
+      $(document).ready(function () {
+        // Smooth scrolling
+        $("a.nav-link").on("click", function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          }
+        });
+
+        // Wow.js initialization
+        wow = new WOW();
+        wow.init();
+
+        // Navbar color change on scroll
+        $(window).on("scroll", function () {
+          var bodyScroll = $(window).scrollTop(),
+            navbar = $(".navbar");
+
+          if (bodyScroll > 50) {
+            $(".navbar-logo img").attr("src", "/static/css/Logo-Black.png");
+            navbar.addClass("nav-scroll");
+          } else {
+            $(".navbar-logo img").attr("src", "/static/css/Logo.png");
+            navbar.removeClass("nav-scroll");
+          }
+        });
+
+        // ScrollIt initialization
+        $(window).on("load", function () {
+          var bodyScroll = $(window).scrollTop(),
+            navbar = $(".navbar");
+
+          if (bodyScroll > 50) {
+            $(".navbar-logo img").attr("src", "/static/css/Logo-Black.png");
+            navbar.addClass("nav-scroll");
+          }
+          $.scrollIt({
+            easing: "swing",
+            scrollTime: 900,
+            activeClass: "active",
+            onPageChange: null,
+            topOffset: -63,
+          });
+        });
+      });
+
+      var faq = document.getElementsByClassName("faq-page");
+      var i;
+      for (i = 0; i < faq.length; i++) {
+        faq[i].addEventListener("click", function () {
+          /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+          this.classList.toggle("active");
+          /* Toggle between hiding and showing the active panel */
+          var body = this.nextElementSibling;
+          if (body.style.display === "block") {
+            body.style.display = "none";
+          } else {
+            body.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

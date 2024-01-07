@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TechSnap</title>
+    <link rel="shortcut icon" href="/static/css/TS.png" type="x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+          crossorigin="anonymous">
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand navbar-logo">
+        <img src="/static/css/Logo.png" alt="logo" class="logo-1" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="fas fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#cw">Budgeting</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#contact">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              More
+            </a>
+            <div class="dropdown-menu animated slideDown more-actions" aria-labelledby="navbarDropdown">
+              <form action="/component">
+                <button class="drop-down-list">Find Components</button>
+              </form>
+              <form action="/pre_built">
+                <button class="drop-down-list">Look for Pre-builts</button>
+              </form>
+              <form action="/querying">
+                <button class="drop-down-list">Ask Here</button>
+              </form>
+              
+              <!-- Add dropdown items as needed -->
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+</nav>
+<!-- End Navbar -->
+<!-- Result Start -->
+<section class="banner">
+  <div class="banner-over">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-12" style="z-index: 1000;">
+          <div class="banner-text">
+            <form action="/process_form" method="post" onsubmit="return validateForm()">
+              <div class="nform-group">
+              <label>Choose A Category:</label><br>
+              <input type="radio" id="gaming" name="category" value="gaming" required>
+              <label for="gaming">Gaming</label>
+              <input type="radio" id="professional" name="category" value="professional" required>
+              <label for="professional">Professional</label><br><br>
+
+              <label>Choose A Subcategory:</label><br>
+              <input type="radio" id="laptop" name="subcategory" value="laptop" required>
+              <label for="laptop">Laptop</label>
+              <input type="radio" id="pc" name="subcategory" value="pc" required>
+              <label for="pc">PC</label><br><br>
+
+              <label for="budget">Enter Your Budget:</label><br>
+              <input type="text" id="budget" name="budget" required><br><br>
+
+              <button type="submit" class="Submitbruh">Submit</button>
+              </div>
+            </form>
+          </div>
+          </div>
+          <div class="col-md-4 col-sm-12" style="margin-bottom: -500px; bottom: 10px; right: 100px">
+            <img src="/static/css/Backg.png" alt="Image" style="width: 100%;">
+ 
+        </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- Result End -->
+<!-- Other Start -->
+<section class="about section-padding prelative" style="background-image: radial-gradient(circle at 13% 47%, rgba(140, 140, 140,0.03) 0%, rgba(140, 140, 140,0.03) 25%,transparent 25%, transparent 100%),radial-gradient(circle at 28% 63%, rgba(143, 143, 143,0.03) 0%, rgba(143, 143, 143,0.03) 16%,transparent 16%, transparent 100%),radial-gradient(circle at 81% 56%, rgba(65, 65, 65,0.03) 0%, rgba(65, 65, 65,0.03) 12%,transparent 12%, transparent 100%),radial-gradient(circle at 26% 48%, rgba(60, 60, 60,0.03) 0%, rgba(60, 60, 60,0.03) 6%,transparent 6%, transparent 100%),radial-gradient(circle at 97% 17%, rgba(150, 150, 150,0.03) 0%, rgba(150, 150, 150,0.03) 56%,transparent 56%, transparent 100%),radial-gradient(circle at 50% 100%, rgba(25, 25, 25,0.03) 0%, rgba(25, 25, 25,0.03) 36%,transparent 36%, transparent 100%),radial-gradient(circle at 55% 52%, rgba(69, 69, 69,0.03) 0%, rgba(69, 69, 69,0.03) 6%,transparent 6%, transparent 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-content text-center">
+                    <div class="row">
+                        <section class="">
+                            <div class="banner-overlay">
+                                <div class="container">
+                                    <div class="row">
+                                        <h1>{{category}}</h1>
+                                    </div>
+                                    <div class="row">
+                                        <h3>Computers you might need if you need to buy more than one person</h3>
+                                    </div>
+                                    <div class="row">
+                                        <table border="1">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Motherboard</th>
+                                                    <th>GPU</th>
+                                                    <th>CPU</th>
+                                                    <th>Storage</th>
+                                                    <th>RAM</th>
+                                                    <th>PSU</th>
+                                                    <th>Case</th>
+                                                    <th>Cost</th>
+                                                    <th>Performance Utilization</th>
+                                                    <th>Source</th>
+                                                    <!-- Add more columns as needed -->
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for obj in recommend1 %}
+                                                <tr>
+                                                    <td>{{ obj.ID }}</td>
+                                                    <td>{{ obj.Motherboard }}</td>
+                                                    <td>{{ obj.GPU }}</td>
+                                                    <td>{{ obj.CPU }}</td>
+                                                    <td>{{ obj.Storage }}</td>
+                                                    <td>{{ obj.RAM }}</td>
+                                                    <td>{{ obj.PSU }}</td>
+                                                    <td>{{ obj.Case }}</td>
+                                                    <td>{{ obj.Cost }}</td>
+                                                    
+                                                    <td>
+                                                      {% if obj.Score >= 99 %}
+                                                           Complete Utilization
+                                                      {% elif obj.Score >= 90 %}
+                                                          Excellent Utilization
+                                                      {% elif obj.Score >= 80 %}
+                                                          Great Utilization
+                                                      {% else %}
+                                                          Performance might be affected
+                                                      {% endif %}
+                                                  </td>
+                                                     <td><a href="{{ obj.Source}}">Link</a></td>
+                                                    <!-- Add more columns as needed -->
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Result End -->
+
+                        <!-- Result Start -->
+          
+                        <section class="">
+                            <div class="banner-overlay">
+                                <div class="container">
+                                    <div class="row">
+                                        <h3 style="margin-top: 30px;">Best deals under your budget</h3>
+                                    </div>
+                                    <div class="row">
+                                        <table border="1">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Motherboard</th>
+                                                    <th>GPU</th>
+                                                    <th>CPU</th>
+                                                    <th>Storage</th>
+                                                    <th>RAM</th>
+                                                    <th>PSU</th>
+                                                    <th>Case</th>
+                                                    <th>Cost</th>
+                                                    <th>Performance Utilization</th>
+                                                    <th>Source</th>
+                                                    <!-- Add more columns as needed -->
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for obj in recommend2 %}
+                                                <tr>
+                                                    <td>{{ obj.ID }}</td>
+                                                    <td>{{ obj.Motherboard }}</td>
+                                                    <td>{{ obj.GPU }}</td>
+                                                    <td>{{ obj.CPU }}</td>
+                                                    <td>{{ obj.Storage }}</td>
+                                                    <td>{{ obj.RAM }}</td>
+                                                    <td>{{ obj.PSU }}</td>
+                                                    <td>{{ obj.Case }}</td>
+                                                    <td>{{ obj.Cost }}</td>
+                                                    <td>
+                                                      {% if obj.Score >= 99 %}
+                                                           Complete Utilization
+                                                      {% elif obj.Score >= 90 %}
+                                                          Excellent Utilization
+                                                      {% elif obj.Score >= 80 %}
+                                                          Great Utilization
+                                                      {% else %}
+                                                          Performance might be affected
+                                                      {% endif %}
+                                                  </td>
+                                                    <td><a href="{{ obj.Source}}">Link</a></td>
+                                                    <!-- Add more columns as needed -->
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Result End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Other End -->
+<!-- Footer Start -->
+<footer class="footer-copy">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>2023 &copy; TechSnap</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<!-- scrollIt js -->
+<script src="/static/js/scrollIt.min.js"></script>
+<script src="/static/js/wow.min.js"></script>
+<script>
+    
+    var uploadedImage = localStorage.getItem("uploadedImage");
+
+    if (uploadedImage) {
+        var imageElement = document.getElementById("uploaded-image");
+
+        if (imageElement) {
+            imageElement.src = uploadedImage;
+            imageElement.style.maxWidth = "100%";
+            imageElement.style.height = "auto";
+            imageElement.style.border = "4px solid #fff";
+        }
+    }
+
+    
+        function openModal() {
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        
+
+        function validateForm() {
+            var categoryRadios = document.getElementsByName('category');
+            var categorySelected = false;
+
+            for (var i = 0; i < categoryRadios.length; i++) {
+                if (categoryRadios[i].checked) {
+                    categorySelected = true;
+                    break;
+                }
+            }
+
+            if (!categorySelected) {
+                alert('Please choose a category!');
+                return false;
+            }
+
+            var budget = document.getElementById('budget').value;
+            if (isNaN(budget) || budget <= 0) {
+                alert('Please enter a valid budget!');
+                return false;
+            }
+
+            closeModal();  // Close the modal after successful validation
+            return true;
+        }
+
+    wow = new WOW();
+    wow.init();
+
+      // Navbar color change on scroll
+      $(window).on("scroll", function () {
+        var bodyScroll = $(window).scrollTop(),
+          navbar = $(".navbar");
+
+        if (bodyScroll > 50) {
+          $(".navbar-logo img").attr("src", "/static/css/Logo-Black.png");
+          navbar.addClass("nav-scroll");
+        } else {
+          $(".navbar-logo img").attr("src", "/static/css/Logo.png");
+          navbar.removeClass("nav-scroll");
+        }
+      });
+
+      // ScrollIt initialization
+      $(window).on("load", function () {
+        var bodyScroll = $(window).scrollTop(),
+          navbar = $(".navbar");
+
+        if (bodyScroll > 50) {
+          $(".navbar-logo img").attr("src", "/static/css/Logo-Black.png");
+          navbar.addClass("nav-scroll");
+        }
+        $.scrollIt({
+          easing: "swing",
+          scrollTime: 900,
+          activeClass: "active",
+          onPageChange: null,
+          topOffset: -63,
+        });
+      });   
+</script>
+</body>
+</html>
