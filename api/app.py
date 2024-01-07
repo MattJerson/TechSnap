@@ -112,7 +112,7 @@ def convert_filestorage_to_pil(filestorage):
         raise ValueError('Invalid file type')
     
     # Read the file into a BytesIO buffer
-    byteImgIO = io.BytesIO()
+    byteImgIO = BytesIO()
     byteImg = Image.open(filestorage)
     byteImg.save(byteImgIO, "PNG")
     byteImgIO.seek(0)
